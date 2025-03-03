@@ -63,6 +63,9 @@ Plug 'dense-analysis/ale'
   let g:ale_echo_msg_warning_str = 'W'
   let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
   let g:ale_lint_on_enter = 1
+  let g:ale_hints = {
+      \ 'go': ['gopls'],
+      \}
 
   nmap sp <Plug>(ale_previous_wrap)
   nmap sn <Plug>(ale_next_wrap)
@@ -78,6 +81,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/vim-easy-align'
   xmap ga <Plug>(EasyAlign)
   nmap ga <Plug>(EasyAlign)
+
+Plug 'f-person/git-blame.nvim'
+  let g:gitblame_date_format = '%Y-%m-%d %H:%M'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
